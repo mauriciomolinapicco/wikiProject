@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block body %}
+{%for rec in recommendations %}
+    <li><a href="{% url 'entry' entry=rec %}">{{ rec }}</a></li>
+{% endfor %}
+
+{% endblock %}
+
